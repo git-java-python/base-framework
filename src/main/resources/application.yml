@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: base-framework
+
+app:
+  datasource:
+    primary:
+      url: jdbc:mysql://localhost:3306/app
+      username: app
+      password: app
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    secondary:
+      url: jdbc:mysql://localhost:3306/analytics
+      username: analytics
+      password: analytics
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+calcite:
+  primary:
+    driver: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/app
+    username: app
+    password: app
+  secondary:
+    driver: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/analytics
+    username: analytics
+    password: analytics
+
+sa-token:
+  token-name: satoken
+  timeout: 86400
+  is-concurrent: true
+  is-share: true
+  token-style: uuid

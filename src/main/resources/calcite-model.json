@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "defaultSchema": "APP",
+  "schemas": [
+    {
+      "name": "APP",
+      "type": "custom",
+      "factory": "org.apache.calcite.adapter.jdbc.JdbcSchema$Factory",
+      "operand": {
+        "jdbcDriver": "${calcite.primary.driver}",
+        "jdbcUrl": "${calcite.primary.url}",
+        "jdbcUser": "${calcite.primary.username}",
+        "jdbcPassword": "${calcite.primary.password}"
+      }
+    },
+    {
+      "name": "ANALYTICS",
+      "type": "custom",
+      "factory": "org.apache.calcite.adapter.jdbc.JdbcSchema$Factory",
+      "operand": {
+        "jdbcDriver": "${calcite.secondary.driver}",
+        "jdbcUrl": "${calcite.secondary.url}",
+        "jdbcUser": "${calcite.secondary.username}",
+        "jdbcPassword": "${calcite.secondary.password}"
+      }
+    }
+  ]
+}
