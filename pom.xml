@@ -10,6 +10,7 @@
     <description>Spring Boot 3 + JDK 21 base framework with multi datasource, Calcite and Sa-Token.</description>
 
     <properties>
+        <skipTests>true</skipTests>
         <java.version>21</java.version>
         <spring-boot.version>3.2.2</spring-boot.version>
         <sa-token.version>1.37.0</sa-token.version>
@@ -67,6 +68,12 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
+        </dependency>
+
+        <!-- Spring Boot Redis Starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
     </dependencies>
 

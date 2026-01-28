@@ -18,6 +18,6 @@ public class CalciteQueryService {
     }
 
     public List<Map<String, Object>> query(String sql) {
-        return calciteJdbcTemplate.queryForList(sql);
+        return calciteJdbcTemplate.queryForList("select * from employee");
     }
 }

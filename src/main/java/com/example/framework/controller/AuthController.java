@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
 
     @PostMapping("/login")
-    public ApiResponse<String> login(@RequestParam @NotBlank String userId) {
+    public ApiResponse<String> login(@NotBlank @RequestParam("userId")  String userId) {
         StpUtil.login(userId);
         return ApiResponse.success(StpUtil.getTokenValue());
     }

@@ -25,7 +25,7 @@ public class CalciteController {
 
     @SaCheckLogin
     @GetMapping("/query")
-    public ApiResponse<List<Map<String, Object>>> query(@RequestParam @NotBlank String sql) {
+    public ApiResponse<List<Map<String, Object>>> query( @NotBlank @RequestParam("sql") String sql) {
         return ApiResponse.success(calciteQueryService.query(sql));
     }
 }
