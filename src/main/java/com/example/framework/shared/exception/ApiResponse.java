@@ -1,4 +1,4 @@
-package com.example.framework.common;
+package com.example.framework.shared.exception;
 
 public class ApiResponse<T> {
 

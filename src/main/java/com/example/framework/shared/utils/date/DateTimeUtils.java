@@ -1,4 +1,4 @@
-package com.example.framework.common;
+package com.example.framework.shared.utils.date;
 
 import java.time.Instant;
 import java.time.LocalDateTime;

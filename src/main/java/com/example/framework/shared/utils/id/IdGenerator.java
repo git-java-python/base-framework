@@ -1,4 +1,4 @@
-package com.example.framework.common;
+package com.example.framework.shared.utils.id;
 
 import java.util.UUID;
 

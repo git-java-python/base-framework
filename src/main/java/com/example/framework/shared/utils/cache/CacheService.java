@@ -1,4 +1,4 @@
-package com.example.framework.utils.cache;
+package com.example.framework.shared.utils.cache;
 
 import com.google.common.hash.BloomFilter;
 import jakarta.annotation.Resource;

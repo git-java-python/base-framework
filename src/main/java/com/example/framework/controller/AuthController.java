@@ -1,7 +1,7 @@
 package com.example.framework.controller;
 
 import cn.dev33.satoken.stp.StpUtil;
-import com.example.framework.common.ApiResponse;
+import com.example.framework.shared.exception.ApiResponse;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;

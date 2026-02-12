@@ -1,5 +1,6 @@
-package com.example.framework.common;
+package com.example.framework.shared.hander;
 
+import com.example.framework.shared.exception.ApiResponse;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;

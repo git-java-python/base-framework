@@ -1,15 +1,14 @@
 package com.example.framework.controller;
 
 import cn.dev33.satoken.annotation.SaCheckLogin;
-import com.example.framework.common.ApiResponse;
+import com.example.framework.shared.exception.ApiResponse;
 import com.example.framework.service.CalciteQueryService;
-import jakarta.validation.constraints.NotBlank;
+
 import java.util.List;
 import java.util.Map;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -25,7 +24,7 @@ public class CalciteController {
 
     @SaCheckLogin
     @GetMapping("/query")
-    public ApiResponse<List<Map<String, Object>>> query( @NotBlank @RequestParam("sql") String sql) {
-        return ApiResponse.success(calciteQueryService.query(sql));
+    public ApiResponse<List<Map<String, Object>>> queryUsers(  ) {
+        return ApiResponse.success(calciteQueryService.queryUsers( ));
     }
 }
